@@ -1,11 +1,11 @@
 import React from "react";
 
-function Cadastro() {
+function Perfil() {
     return (
         <div>
-            <h1> Cadastro </h1>
+            <h1> Perfil </h1>
         </div>
     )
 }
 
-export default Cadastro;
+export default Perfil;

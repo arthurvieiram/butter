@@ -1,7 +1,21 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function Inicio() {
-    return <h1> Inicio </h1>
+
+    const history = useHistory();
+
+    return (
+        <div>
+            <h1> Inicio </h1>
+            <button onClick={() => 
+                {history.push("login")} 
+            } 
+            > 
+                Login
+            </button>
+        </div>
+    )
 }
 
 export default Inicio;
