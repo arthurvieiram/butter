@@ -1,11 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Form } from "react-bootstrap";
+import "./Login.css"
+
 function Login() {
     return (
-        <div>
-            <h1> Login </h1>
-            <Link to="inicio"> Inicio </Link>
+        <div className = "base">
+            <div className = "container">
+                <Form>
+                    <h1> Entrar </h1>
+                    <div className = "inputs">
+                    <input></input>
+                    <input></input>
+                    </div>
+                    <button> Entrar </button>
+                    </div>
+                </Form>
         </div>
+    </div>
     )
 }
 
