@@ -4,6 +4,7 @@
     max-width: 635px;
     align-items: center;
     flex-grow: 1;
+    color: white;
 }
 
 .base {
@@ -11,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #142337;
 }
 
 .inputs {
@@ -19,3 +21,4 @@
     margin-left: 16px;
     margin-right: 16px;
 }
+

@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import "./Login.css"
 
 function Login() {
+
     return (
         <div className = "base">
             <div className = "container">
@@ -23,12 +24,13 @@ function Login() {
                         </Form.Group>
 
                         <Button variant="secondary"> Entrar </Button>
-                        
+
                     </Form>
                 </div>
         </div>
     </div>
     )
+    
 }
 
 export default Login;
