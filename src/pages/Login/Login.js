@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Login.css"
 
 function Login() {
+    
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const history = useHistory();
+
+    function login() {
+        history.push("inicio")
+    }
 
     return (
         <div className = "base">
@@ -14,11 +22,17 @@ function Login() {
                         <h1 className = "entrar"> Entrar </h1>
 
                         <Form.Group className="mb-3" controlId="email">
-                            <Form.Control type="email" placeholder="Endereço de email" />
+                            <Form.Control 
+                            type="email" 
+                            placeholder="Endereço de email" 
+                            onChange = {(e) => setEmail(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="senha">
-                            <Form.Control type="password" placeholder="Senha" />
+                            <Form.Control 
+                            type="password" 
+                            placeholder="Senha" 
+                            onChange = {(e) => setPassword(e.target.value)} />
                         </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -28,7 +42,7 @@ function Login() {
                             </div>
                             </Form.Group>
 
-                        <Button variant="secondary"> Entrar </Button>
+                        <Button variant="secondary" onClick = {(login)}> Entrar </Button>
                         
                     </Form>
 

@@ -40,7 +40,7 @@
 }
 
 .cadastrar:hover {
-    color:#fb6222;
+    color:grey;
 }
 
 .componentes {
@@ -68,12 +68,4 @@
     background-color: #fb6222 !important;
     border-color: #fb6222 !important;
     box-shadow: none !important;
-}
-
-.form-control {
-    box-shadow: none !important;
-}
-
-.form-control:hover {
-    color: #fb6222;
 }
