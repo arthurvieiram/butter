@@ -1,20 +1,31 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import "./Login.css"
 
 function Login() {
     return (
         <div className = "base">
             <div className = "container">
-                <Form>
+                <div>
                     <h1> Entrar </h1>
-                    <div className = "inputs">
-                    <input></input>
-                    <input></input>
-                    </div>
-                    <button> Entrar </button>
-                    </div>
-                </Form>
+                    <Form className = "inputs">
+                        
+                        <Form.Group className="mb-3" controlId="email">
+                            <Form.Control type="email" placeholder="Endereço de email" />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="senha">
+                            <Form.Control type="password" placeholder="Senha" />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label="Lembrar de mim" />
+                        </Form.Group>
+
+                        <Button variant="secondary"> Entrar </Button>
+                        
+                    </Form>
+                </div>
         </div>
     </div>
     )
