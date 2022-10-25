@@ -26,6 +26,10 @@
     height: 45%;
 }
 
+.entrar {
+    margin-bottom: 15px;
+}
+
 .inputs {
     display: flex;
     flex-direction: column;
