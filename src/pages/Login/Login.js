@@ -14,10 +14,10 @@ function Login() {
     }
 
     return (
-        <div className = "base">
+        <div className = "baseLogin">
                 <div className = "login">
-                    <div className = "box">
-                    <Form className = "inputs">
+                    <div className = "boxLogin">
+                    <Form className = "inputsLogin">
                         
                         <h1 className = "entrar"> Entrar </h1>
 
@@ -53,7 +53,6 @@ function Login() {
                 </div>
     </div>
     )
-
 }
 
 export default Login;

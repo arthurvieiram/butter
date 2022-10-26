@@ -1,4 +1,4 @@
-.base {
+.baseCadastro {
     height: 100%;
     width: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     background-color: #142337;
 }
 
-.box {
+.boxCadastro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,15 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-.cadastro {
+.inputsCadastro {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 80%;
+}
+
+.cadastroTitulo {
     display: flex;
     color: white;
+    width: 80%;
 }

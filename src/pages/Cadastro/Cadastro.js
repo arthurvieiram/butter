@@ -8,21 +8,34 @@ function Cadastro() {
     const[nome, setNome] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [locUsuario, setLocUsuario] = useState({
+        pais: "", 
+        estado: "", 
+        endcompleto: "",
+    });
+
     const history = useHistory();
 
-    function cadastro() {
-        history.push("inicio")
+    function cadastrar() {
+        console.log(locUsuario);
+        history.push("inicio");
+    }
+
+    function handleChange(e) {
+        const {name, value} = e.target;
+        console.log(locUsuario);
+        return setLocUsuario({...locUsuario, [name]:value})
     }
 
     return (
-        <div className = "base">
+        <div className = "baseCadastro">
                 <div className = "cadastro">
                     
-                    <div className = "box">
+                    <div className = "boxCadastro">
                     
-                    <h1 className = "cadastro"> Cadastro </h1>
+                    <h1 className = "cadastroTitulo"> Cadastro </h1>
                     
-                    <Form className = "inputs">
+                    <Form className = "inputsCadastro">
                         <h6 className = "dadosgerais"> Dados gerais </h6>
 
                         <Form.Group className="mb-3" controlId="nome">
@@ -50,26 +63,29 @@ function Cadastro() {
 
                         <Form.Group className="mb-3" controlId="pais">
                             <Form.Control 
-                            type="pais" 
+                            type="text" 
+                            name="pais"
                             placeholder="País" 
-                            />
+                            onChange = {handleChange} />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="uf">
+                        <Form.Group className="mb-3" controlId="estado">
                             <Form.Control 
-                            type="uf" 
+                            type="text"
+                            name="estado" 
                             placeholder="Estado" 
                             />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="endereço">
                             <Form.Control 
-                            type="endereço" 
+                            type="text"
+                            name="endcompleto" 
                             placeholder="Endereço completo" 
                             />
                         </Form.Group>
 
-                        <Button variant="secondary" onClick = {(cadastro)}> Cadastrar </Button>
+                        <Button variant="secondary" onClick = {(cadastrar)}> Cadastrar </Button>
                         
                     </Form>
 
