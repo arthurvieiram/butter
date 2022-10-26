@@ -42,28 +42,35 @@ function Cadastro() {
 
                         <h6 className = "endereço"> Endereço </h6>
 
-                        <Form.Group className="mb-3" controlId="nome">
+                        <Form.Group className="mb-3" controlId="endereço">
                             <Form.Control 
-                            type="nome" 
-                            placeholder="Nome completo" 
+                            type="endereço" 
+                            placeholder="Endereço" 
                             />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="email">
+                        <Form.Group className="mb-3" controlId="ue">
                             <Form.Control 
-                            type="email" 
-                            placeholder="Endereço de email" 
+                            type="ue" 
+                            placeholder="UE " 
                             />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="senha">
+                         <Form.Group className="mb-3" controlId="pais">
                             <Form.Control 
-                            type="password" 
-                            placeholder="Senha" 
+                            type="pais" 
+                            placeholder="País " 
                             />
                         </Form.Group>
 
+                        <Form.Group className="mb-3" controlId="complemento">
+                            <Form.Control 
+                            type="complemento" 
+                            placeholder="Complemento" 
+                            />
+                        </Form.Group>
 
+                        <Button variant="secondary" onClick = {(Cadastro)}> Cadastrar </Button>
                         
                     </Form>
 
