@@ -1,0 +1,75 @@
+.baseLogin {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #142337;
+}
+
+.boxLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 550px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 60%
+}
+
+.entrar {
+    margin-bottom: 15px;
+}
+
+.inputsLogin {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 80%;
+}
+
+.cadastrar {
+    color: white;
+    text-decoration: none;
+    margin-top: 10%;
+}
+
+.cadastrar:hover {
+    color:grey;
+}
+
+.componentes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.esqueceusenha {
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+
+.esqueceusenha:hover {
+    color:grey;
+}
+
+.form-check-input {
+    box-shadow: none !important;
+    border-color: white !important;
+}
+
+.form-check-input:checked {
+    background-color: #fb6222 !important;
+    border-color: #fb6222 !important;
+    box-shadow: none !important;
+}
