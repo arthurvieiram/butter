@@ -1,11 +1,30 @@
 .baseFilmes {
-    height: 150%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #142337;
+}
+
+.paginaFilmes {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filmesAcao {
+    display:flex;
+    flex-direction: column;
+}
+
+.filmesComedia {
+    display:flex;
+    flex-direction: column;
 }
 
 .tituloAcao {
@@ -18,7 +37,6 @@
     display: flex;
     flex-direction: row;
     align-content: space-between;
-    margin-bottom: 2%;
 }
 
 .boxFilme1 {
