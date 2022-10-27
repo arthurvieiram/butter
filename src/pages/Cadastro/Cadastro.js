@@ -87,7 +87,7 @@ function Cadastro() {
 
                         <Button variant="secondary" onClick = {(cadastrar)}> Cadastrar </Button>
 
-                        <Link to="login" className="cadastrado"> Possui cadastro ? </Link>
+                        <Link to="login" className="cadastrado"> Já possui uma conta? Entre agora! </Link>
                         
                     </Form>
 

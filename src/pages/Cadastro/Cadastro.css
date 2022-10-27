@@ -30,6 +30,13 @@
     width: 80%;
 }
 .cadastrado{
+    margin-top: 4%;
+    margin-bottom: 3%;
     color: white;
-    margin-bottom: 10%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.cadastrado:hover {
+    color:grey;
 }
