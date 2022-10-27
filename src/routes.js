@@ -5,6 +5,7 @@ import Filmes from "./pages/Filmes";
 import Inicio from "./pages/Inicio";
 import Login from "./pages/Login";
 import Perfil from "./pages/Perfil";
+import PaginaDeFilme from "./pages/PaginaDeFilme";
 
 function Routes() {
     return(
@@ -15,6 +16,7 @@ function Routes() {
                 <Route path = "/perfil" component = { Perfil } />
                 <Route path = "/inicio" component = { Inicio } />
                 <Route path = "/filmes" component = { Filmes } />
+                <Route path = "/paginadefilme" component = { PaginaDeFilme } />
             </Switch>
         </BrowserRouter>
     )
