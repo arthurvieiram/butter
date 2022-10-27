@@ -1,0 +1,92 @@
+.basePerfil {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #142337;
+}
+
+.paginaPerfil {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Usuario {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.boxUsuario {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 250px;
+    background: grey;
+}
+
+.nomeUsuario {
+    display: flex;
+    color: white;
+    margin-top: 2%;
+}
+
+.dadosUsuario {
+    margin-top: 50%;
+    color: white;
+}
+
+.filmesFavoritados {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.tituloFilmesFav {
+    display: flex;
+    margin-bottom: 1%;
+    justify-content: center;
+    color: white;
+}
+
+.verTodos {
+    display: flex;
+    color: white;
+    justify-content: right;
+    margin-right: 3%;
+}
+
+.boxFavoritosWrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.boxFV1 {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
+
+.boxFV2 {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
+
+.boxFV3 {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
