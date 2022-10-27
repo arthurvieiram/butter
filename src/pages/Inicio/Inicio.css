@@ -8,9 +8,21 @@
     background-color: #142337;
 }
 
+.paginaInicio {
+    height: 100%;
+    width: 95%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+}
+
 .textosInicio {
     height: 30%;
     width: 100%;
+    margin-right: 10%;
     display: flex;
     flex-direction: column;
     background-color: #142337;
@@ -26,26 +38,38 @@
     display: flex;
     align-items: flex-start;
     color: white;
+    margin-left: 10%;
+    text-align: justify;
+    margin-bottom: 5%;
 }
 
 .texto2 {
     display: flex;
     align-items: flex-start;
     color: white;
+    margin-left: 10%;
+    text-align: justify;
 }
 
 .maisAssistidos {
     height: 40%;
+    margin-right: 10%;
     display: flex;
-    flex-direction: row;
-    align-content: space-between;
+    flex-direction: column;
 }
 
 .tituloMaisAssistidos {
-    /* height: 10%; */
+    margin-bottom: 2%;
     display: flex;
     flex-direction: column;
+    text-align: center;
     color: white;
+}
+
+.boxMaisAssistidosWrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
 }
 
 .boxMA1 {
