@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
+import { TbLogout } from "react-icons/tb";
+import { BiSearchAlt } from "react-icons/bi";
+import { BsTelephone, BsInstagram } from "react-icons/bs";
+
 import "./Login.css"
 
 function Login() {
@@ -16,7 +21,7 @@ function Login() {
     return (
         <div className = "baseLogin">
 
-                <div className = "login">
+            <div className = "login">
                     <div className = "boxLogin">
                     <Form className = "inputsLogin">
                         
