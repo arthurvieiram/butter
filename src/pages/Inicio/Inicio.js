@@ -7,7 +7,7 @@ function Inicio() {
     return (
         <div className="baseInicio">
             <div className="boxHeader">
-                <div className = "boxFotoHeader"></div>
+            <img className = "logo_butter" src = "/images/logo_butter.png" alt =" logo_butter" />
                 
                 <div className = "botoesInicioFilmes">
                     <Link to="Inicio" className="acessoInicio"> Início </Link>
