@@ -29,6 +29,7 @@ function Cadastro() {
 
     return (
         <div className = "baseCadastro">
+
                 <div className = "cadastro">
                     
                     <div className = "boxCadastro">

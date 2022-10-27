@@ -16,7 +16,6 @@ function Routes() {
                 <Route path = "/inicio" component = { Inicio } />
                 <Route path = "/filmes" component = { Filmes } />
             </Switch>
-            <p> Footer </p>
         </BrowserRouter>
     )
 }

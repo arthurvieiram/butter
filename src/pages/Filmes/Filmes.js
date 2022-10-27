@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 function Filmes() {
     return (
         <div className = "baseFilmes">
+
             <div className = "paginaFilmes">
                 <div className = "filmesAcao">
                     <h1 className = "tituloAcao"> Ação </h1>

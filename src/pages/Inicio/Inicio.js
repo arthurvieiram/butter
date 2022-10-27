@@ -1,10 +1,25 @@
 import React from "react";
 import "./Inicio.css"
+import { Link } from "react-router-dom";
 
 function Inicio() {
 
     return (
         <div className="baseInicio">
+            <div className="boxHeader">
+                <div className = "boxFotoHeader"></div>
+                
+                <div className = "botoesInicioFilmes">
+                    <Link to="Inicio" className="acessoInicio"> Início </Link>
+                    <Link to="Filmes" className="acessoFilmes"> Filmes </Link>
+                </div>
+                    
+                    <div className="botoesAcessoUsuario">
+                        <Link to="Perfil" className="acessoPerfil"> Perfil </Link>
+                        <Link to="Login" className="logOut"> Logout </Link>
+                    </div>
+            
+            </div>
             <div className="paginaInicio">
 
                 <div className="textosInicio">

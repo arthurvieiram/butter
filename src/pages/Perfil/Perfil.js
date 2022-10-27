@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Perfil.css"
 
 function Perfil() {
     return (
         <div className = "basePerfil">
+
             <div className = "paginaPerfil">
                 <div className = "Usuario">
                 <img className = "icone" src = "/images/icone.png" alt =" icone" />

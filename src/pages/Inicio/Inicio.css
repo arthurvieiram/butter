@@ -8,6 +8,84 @@
     background-color: #142337;
 }
 
+.boxHeader {
+    display: flex;
+    flex-direction: row;
+    height: 13%;
+    width: 100%;
+    background: grey;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxFotoHeader {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 10%;
+    height: 85px;
+    width: 212px;
+    background: orange;
+}
+
+.botoesInicioFilmes {
+    height: 60%;
+    width: 15%;
+    margin-right: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botoesAcessoUsuario {
+    height: 60%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.acessoInicio {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoInicio:hover {
+    color: orange;
+}
+
+.acessoFilmes {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoFilmes:hover {
+    color: orange;
+}
+
+.acessoPerfil {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoPerfil:hover {
+    color: orange;
+}
+
+.logOut {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.logOut:hover {
+    color: orange;
+}
+
 .paginaInicio {
     height: 100%;
     width: 95%;
