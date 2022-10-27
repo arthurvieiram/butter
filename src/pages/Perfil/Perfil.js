@@ -6,7 +6,7 @@ function Perfil() {
         <div className = "basePerfil">
             <div className = "paginaPerfil">
                 <div className = "Usuario">
-                    <div className = "boxUsuario"></div>
+                <img className = "icone" src = "/images/icone.png" alt =" icone" />
                     <h1 className = "nomeUsuario"> Nome </h1>
                     <div className = "dadosUsuario">
                         <h2 className = "idade"> Idade </h2>
