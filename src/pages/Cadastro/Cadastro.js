@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Cadastro.css"
 
 function Cadastro() {
@@ -86,6 +86,8 @@ function Cadastro() {
                         </Form.Group>
 
                         <Button variant="secondary" onClick = {(cadastrar)}> Cadastrar </Button>
+
+                        <Link to="login" className="cadastrado"> Possui cadastro ? </Link>
                         
                     </Form>
 
