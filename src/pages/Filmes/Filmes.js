@@ -30,18 +30,18 @@ function Filmes() {
                 <div className = "filmesAcao">
                     <h1 className = "tituloAcao"> Ação </h1>
                     <div className = "boxFilmesWrapper">
-                        <Link to="inicio" className = "boxFilme1"></Link>
-                        <Link to="inicio" className = "boxFilme2"></Link>
-                        <Link to="inicio" className = "boxFilme3"></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
                     </div>
                 </div>
 
                 <div className = "filmesComedia">
                     <h1 className = "tituloComedia"> Comédia </h1>
                     <div className = "boxFilmesCWrapper">
-                        <Link to="inicio" className = "boxFilmeC1"></Link>
-                        <Link to="inicio" className = "boxFilmeC2"></Link>
-                        <Link to="inicio" className = "boxFilmeC3"></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
                     </div>  
                 </div>
             </div>

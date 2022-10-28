@@ -41,9 +41,9 @@ function Perfil() {
                     <h1 className = "tituloFilmesFav"> Filmes Favoritados </h1>
                     <h4 className = "verTodos"> Ver todos </h4>
                     <div className="boxFavoritosWrapper">
-                            <div className = "boxFV1"></div>
-                            <div className = "boxFV2"></div>
-                            <div className = "boxFV3"></div>
+                    <img className = "interistelar2" src = "/images/interistelar.png" alt =" interistelar2" />
+                    <img className = "interistelar2" src = "/images/interistelar.png" alt =" interistelar2" />
+                    <img className = "interistelar2" src = "/images/interistelar.png" alt =" interistelar2" />
                         </div>
                 </div>
             </div>
