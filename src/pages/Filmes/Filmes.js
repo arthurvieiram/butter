@@ -31,17 +31,17 @@ function Filmes() {
                     <h1 className = "tituloAcao"> Ação </h1>
                     <div className = "boxFilmesWrapper">
                         <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
-                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
-                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "topgun" src = "/images/topgun.png" alt =" topgun" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" /></Link>
                     </div>
                 </div>
 
                 <div className = "filmesComedia">
                     <h1 className = "tituloComedia"> Comédia </h1>
                     <div className = "boxFilmesCWrapper">
-                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
-                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
-                        <Link to="inicio" className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "minhamae" src = "/images/minhamae.png" alt =" minhmae" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "auto" src = "/images/auto.png" alt =" auto" /></Link>
+                        <Link to="inicio" className = "boxFilmeC1"><img className = "ace" src = "/images/ace.png" alt =" ace" /></Link>
                     </div>  
                 </div>
             </div>

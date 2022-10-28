@@ -39,8 +39,8 @@ function Inicio() {
                     <h1 className="tituloMaisAssistidos"> Filmes mais assistidos </h1>
                         <div className="boxMaisAssistidosWrapper">
                         <img className = "interistelar" src = "/images/interistelar.png" alt =" interistelar" />
-                        <img className = "interistelar" src = "/images/interistelar.png" alt =" interistelar" />
-                        <img className = "interistelar" src = "/images/interistelar.png" alt =" interistelar" />
+                        <img className = "minhamae" src = "/images/minhamae.png" alt =" interistelar" />
+                        <img className = "topgun" src = "/images/topgun.png" alt =" interistelar" />
                         </div>
                     </div>
             </div>

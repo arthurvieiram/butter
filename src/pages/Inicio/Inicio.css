@@ -173,6 +173,22 @@
     margin-right: 20px;
 }
 
+.minhamae {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
+
+.topgun {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
+
 .boxMA3 {
     display: flex;
     width: 200px;
