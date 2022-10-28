@@ -2,9 +2,99 @@
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #142337;
+}
+
+.paginaCadastro {
+    height: 100%;
+    width: 100%;
+    margin-top: -1%;
+    margin-bottom: 2.5%;
+    margin-right: 10.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxHeaderCadastro {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    height: 13%;
+    width: 100%;
+    background: #142337;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoButter {
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 3%;
+}
+
+.botoesInicioFilmes {
+    height: 60%;
+    width: 200%;
+    margin-right: 50%;
+    margin-left: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botoesAcessoUsuario {
+    height: 60%;
+    width: 150%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.acessoInicio {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoInicio:hover {
+    color: orange;
+}
+
+.acessoFilmes {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoFilmes:hover {
+    color: orange;
+}
+
+.acessoPerfil {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoPerfil:hover {
+    color: orange;
+}
+
+.logOut {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.logOut:hover {
+    color: orange;
 }
 
 .boxCadastro {
@@ -12,8 +102,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 450px;
-    height: 550px;
+    width: 200%;
+    height: 110%;
     background: rgba(0, 0, 0, 0.3);
 }
 
@@ -39,4 +129,49 @@
 
 .cadastrado:hover {
     color:grey;
+}
+
+.boxFooterCadastro {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5%;
+    height: 13%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textoPrincipal {
+    display: flex;
+    color: white;
+}
+
+.copyRight {
+    display: flex;
+    color: white;
+    align-self: flex-end;
+    margin-left: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.contatoCPE {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5%;
+}
+
+.contatoInstagram {
+    display: flex;
+    margin-top: -8%;
+    text-decoration: none;
+    color: white;
+}
+
+.contatoInstagram:hover {
+    color:orange;
+}
+
+.simboloIg {
+    align-self: end;
 }

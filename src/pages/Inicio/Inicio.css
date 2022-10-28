@@ -36,7 +36,7 @@
 
 .botoesAcessoUsuario {
     height: 60%;
-    width: 150%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,6 +61,16 @@
 }
 
 .acessoFilmes:hover {
+    color: orange;
+}
+
+.acessoCadastro {
+    font-size:xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.acessoCadastro:hover {
     color: orange;
 }
 

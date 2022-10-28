@@ -48,7 +48,7 @@ function Login() {
 
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <div className = "componentes">
-                                <Form.Check type="checkbox" label="Lembrar de mim" />
+                                <Form.Check type="checkbox" label="Lembrar de mim"/>
                                 <Link to="cadastro" className="esqueceusenha"> Esqueceu sua senha? </Link>
                             </div>
                             </Form.Group>
