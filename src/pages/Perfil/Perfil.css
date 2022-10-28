@@ -146,7 +146,23 @@
     align-content: space-between;
 }
 
-.interistelar2 {
+.ace {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
+
+.auto {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background: grey;
+    margin-right: 20px;
+}
+
+.deltaforce {
     display: flex;
     width: 200px;
     height: 300px;
