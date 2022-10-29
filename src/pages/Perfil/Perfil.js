@@ -28,7 +28,7 @@ function Perfil() {
 
             <div className = "paginaPerfil">
                 <div className = "Usuario">
-                <img className = "icone" src = "/images/icone.png" alt =" icone" />
+                <img className = "icone" src = "/images/icone2.png" alt =" icone" />
                     <h1 className = "nomeUsuario"> Nome </h1>
                     <div className = "dadosUsuario">
                         <h2 className = "idade"> Idade </h2>
