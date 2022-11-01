@@ -21,7 +21,7 @@ const Modal = ({ open, onClose }) => {
           </div>
           <div className='btnContainer'>
             <button className='btnPrimary'>
-              <span className='bold'>FAVORITAR</span>
+              <span className='bold' onClick = {() => alert('O filme foi favoritado com sucesso!')}> FAVORITAR </span>
             </button>
           </div>
         </div>
