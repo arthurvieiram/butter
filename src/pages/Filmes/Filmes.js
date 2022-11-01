@@ -1,5 +1,7 @@
-import React from "react";
-import "./Filmes.css"
+import React, { useState } from 'react';
+import './index.css';
+import "./Filmes.css";
+import Modal from './Modal';
 import { Link } from "react-router-dom"
 import { CgProfile } from "react-icons/cg";
 import { TbLogout } from "react-icons/tb";
@@ -8,6 +10,9 @@ import { BsTelephone, BsInstagram } from "react-icons/bs";
 import {Button} from "react-bootstrap";
 
 function Filmes() {
+
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <div className = "baseFilmes">
 
@@ -31,18 +36,18 @@ function Filmes() {
                 <div className = "filmesAcao">
                     <h1 className = "tituloAcao"> Ação </h1>
                     <div className = "boxFilmesWrapper">
-                        <Button variant = 'link' onClick = {() => {alert("Interstellar \nAno: 2014  \nDiretor: Christopher Nolan\n \n Favoritar ♡")}}  className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Button>
-                        <Button variant = 'link' onClick = {() => {alert("Top Gun: Maverick \nAno: 2022  \nDiretor: Jerry Bruckheimer\n \nFavoritar ♡ ")}}  className = "boxFilmeC1"><img className = "topgun" src = "/images/topgun.png" alt =" topgun" /></Button>
-                        <Button variant = 'link' onClick = {() => {alert("The Delta Force \nAno: 1986  \nDiretor: Menahem Golan\n \nFavoritar ♡")}}  className = "boxFilmeC1"><img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" /></Button>
+                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Button><Modal open={openModal} onClose={() => setOpenModal(false)} />
+                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "topgun" src = "/images/topgun.png" alt =" topgun" /></Button><Modal open={openModal} onClose={() => setOpenModal(false)} />
+                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" /></Button><Modal open={openModal} onClose={() => setOpenModal(false)} />
                     </div>
                 </div>
 
                 <div className = "filmesComedia">
                     <h1 className = "tituloComedia"> Comédia </h1>
                     <div className = "boxFilmesCWrapper">
-                        <Button variant = 'link' onClick = {() => {alert("Minha Mãe É uma Peça 3 \nAno: 2016  \nDiretor: Susana Garcia \n \nFavoritar ♡")}}  className = "boxFilmeC1"><img className = "minhamae" src = "/images/minhamae.png" alt =" minhmae" /></Button>
-                        <Button variant = 'link' onClick = {() => {alert("O Auto da Compadecida \nAno: 2000  \nDiretor: Guel Arraes\n \nFavoritar ♡")}}  className = "boxFilmeC1"><img className = "auto" src = "/images/auto.png" alt =" auto" /></Button>
-                        <Button variant = 'link' onClick = {() => {alert("Ace Ventura: Pet Detective \nAno: 1994  \nDiretor: Tom Shadyac\n \nFavoritar ♡")}}  className = "boxFilmeC1"><img className = "ace" src = "/images/ace.png" alt =" ace" /></Button>
+                        <Button variant = 'link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "minhamae" src = "/images/minhamae.png" alt =" minhmae" /></Button>
+                        <Button variant = 'link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "auto" src = "/images/auto.png" alt =" auto" /></Button>
+                        <Button variant = 'link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "ace" src = "/images/ace.png" alt =" ace" /></Button>
                     </div>  
                 </div>
             </div>

@@ -116,13 +116,14 @@
     align-content: space-between;
 }
 
-/*.boxFilme1 {
+.boxFilmeC1 {
     display: flex;
     width: 200px;
     height: 300px;
     background: grey;
     margin-right: 20px;
-}
+    
+}/*
 
 .boxFilme2 {
     display: flex;
@@ -258,3 +259,5 @@
 .simboloIg {
     align-self: end;
 }
+
+
