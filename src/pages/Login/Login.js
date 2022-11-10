@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { BsTelephone, BsInstagram } from "react-icons/bs";
-import "./Login.css"
+import "./Login.css";
+import api from "../../services/api";
 
 function Login() {
     
@@ -10,8 +11,23 @@ function Login() {
     const [password, setPassword] = useState();
     const history = useHistory();
 
-    function login() {
-        history.push("inicio")
+    async function login(e) {
+        e.preventDefault();
+        try {
+            const response = await api.post('/login', {email, password});
+            alert("Bem-vindo à Butter", response.data.user.name);
+            history.push("inicio");
+
+        } catch (error) {
+            if(error.response.status === 403) {
+                alert("Endereço de email e/ou senha inválido(s)!");
+            }
+
+            else {
+                alert(error.response.data.notification);
+            }
+            console.warn(error);
+        }
     }
 
     return (
