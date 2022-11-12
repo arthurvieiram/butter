@@ -1,3 +1,4 @@
+import React from "react";
 import "./Inicio.css"
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
