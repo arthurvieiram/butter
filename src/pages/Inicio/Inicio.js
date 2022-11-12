@@ -1,4 +1,3 @@
-import React from "react";
 import "./Inicio.css"
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
@@ -12,14 +11,14 @@ function Inicio() {
         <div className="baseInicio">
             
             <div className="boxHeaderInicio">
-            <img className = "logoButter" src = "/images/logo_butter.png" alt =" logo_butter" />
+            <img className = "logoButterInicio" src = "/images/logo_butter.png" alt =" logo_butter" />
                 
-                <div className = "botoesInicioFilmes">
-                    <Link to="Inicio" className="acessoInicio"> Início </Link>
-                    <Link to="Filmes" className="acessoFilmes"> Filmes </Link>
+                <div className = "botoesHeaderInicio">
+                    <Link to="Inicio" className="botaoHeaderInicio"> Início </Link>
+                    <Link to="Filmes" className="botaoHeaderInicio"> Filmes </Link>
                 </div>
                     
-                    <div className="botoesAcessoUsuario">
+                    <div className="iconesHeaderInicio">
                         <Link to="Filmes" className="acessoFilmes"> <BiSearchAlt /> </Link>
                         <Link to="Perfil" className="acessoPerfil"> <CgProfile /> </Link>
                         <Link to="Login" className="logOut"> <TbLogout /> </Link>
@@ -38,9 +37,9 @@ function Inicio() {
                 <div className ="maisAssistidos">
                     <h1 className="tituloMaisAssistidos"> Filmes mais assistidos </h1>
                         <div className="boxMaisAssistidosWrapper">
-                        <img className = "interistelar" src = "/images/interistelar.png" alt =" interistelar" />
-                        <img className = "minhamae" src = "/images/minhamae.png" alt =" interistelar" />
-                        <img className = "topgun" src = "/images/topgun.png" alt =" interistelar" />
+                        <img className = "boxassistidos" src = "/images/interistelar.png" alt =" interistelar" />
+                        <img className = "boxassistidos" src = "/images/minhamae.png" alt =" interistelar" />
+                        <img className = "boxassistidos" src = "/images/topgun.png" alt =" interistelar" />
                         </div>
                     </div>
             </div>

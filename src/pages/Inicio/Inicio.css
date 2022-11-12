@@ -1,58 +1,54 @@
 .baseInicio {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #142337;
 }
 
 .boxHeaderInicio {
     display: flex;
     flex-direction: row;
-    margin-top: 1%;
-    height: 13%;
+    height: 90px;
     width: 100%;
     background: #142337;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 30px;
 }
 
-.logoButter {
-    margin-left: 5%;
-    margin-right: 3%;
+.logoButterInicio {
+    width: auto;
+    height: 60px;
 }
 
-.botoesInicioFilmes {
-    height: 60%;
-    width: 200%;
-    margin-right: 50%;
-    margin-left: 2.5%;
+.botoesHeaderInicio  {
     display: flex;
+    width: calc(100% - 330px);
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.botoesAcessoUsuario {
-    height: 60%;
-    width: 100%;
+.iconesHeaderInicio {
     display: flex;
+    width: 120px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-right: 5%;
 }
 
-.acessoInicio {
-    font-size:xx-large;
+.botaoHeaderInicio {
+    font-size:24px;
     text-decoration: none;
     color: white;
 }
 
-.acessoInicio:hover {
+.botaoHeaderInicio:hover {
     color: orange;
 }
+
 
 .acessoFilmes {
     font-size:xx-large;
@@ -95,15 +91,11 @@
 }
 
 .paginaInicio {
-    height: 100%;
-    width: 95%;
-    margin-left: 5%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: space-between;
     align-items: center;
-    margin-bottom: 2%;
+    justify-content: space-around;
 }
 
 .textosInicio {
@@ -142,10 +134,8 @@
 }
 
 .maisAssistidos {
-    height: 50%;
-    margin-bottom: 3%;
-    margin-right: 10%;
-    display: flex;
+    display:flex;
+    width: 45%;
     flex-direction: column;
 }
 
@@ -156,16 +146,112 @@
     text-align: center;
     color: white;
 }
-
+@media (max-width: 1400px) {
+    .texto1{
+        font-size: 24px;
+    }
+    .texto2{
+        font-size: 24px;
+    }
+    .maisAssistidos {
+        width: 90%;
+        max-width: max-content;
+    }
+}
+@media (max-width: 1024px) {
+    .texto1{
+        font-size: 18px;
+    }
+    .texto2{
+        font-size: 18px;
+    }
+    .maisAssistidos {
+        width: 90%;
+        max-width: max-content;
+    }
+}
+@media (max-width: 768px) {
+    .texto1{
+        font-size: 16px;
+    }
+    .texto2{
+        font-size: 16px;
+    }
+    .paginaInicio {
+        flex-direction: column;
+    }
+    .maisAssistidos {
+        width: 90%;
+        max-width: max-content;
+    }
+    .textoPrincipal{
+        font-size: 10px;
+    }
+    .copyRight{
+        font-size: 10px;
+    }
+    .contatoCPE{
+        font-size: 10px;
+        
+    }
+    .contatoInstagram{
+        font-size: 10px;
+    }
+}
+@media (max-width: 425px) {
+    .texto1{
+        font-size: 16px;
+    }
+    .texto2{
+        font-size: 16px;
+    }
+    .paginaInicio {
+        flex-direction: column;
+    }
+    .maisAssistidos {
+        width: 90%;
+        max-width: max-content;
+    }
+    .textoPrincipal{
+        font-size: 6px;
+    }
+    .copyRight{
+        font-size: 6px;
+    }
+    .contatoCPE{
+        font-size: 6px;
+    }
+    .contatoInstagram{
+        font-size: 6px;
+    }
+}
+@media (max-width: 300px) {
+    .texto1{
+        font-size: 10px;
+    }
+    .texto2{
+        font-size: 10px;
+    }
+    .paginaInicio {
+        flex-direction: column;
+    }
+    .maisAssistidos {
+        width: 90%;
+        max-width: max-content;
+    }
+}
 .boxMaisAssistidosWrapper {
     display: flex;
+    width: 100%;
+    height: 310px;
     flex-direction: row;
     align-content: space-between;
+    overflow: auto;
 }
 
 
 
-.interistelar {
+.boxassistidos {
     display: flex;
     width: 200px;
     height: 300px;
@@ -173,21 +259,6 @@
     margin-right: 20px;
 }
 
-.minhamae {
-    display: flex;
-    width: 200px;
-    height: 300px;
-    background: grey;
-    margin-right: 20px;
-}
-
-.topgun {
-    display: flex;
-    width: 200px;
-    height: 300px;
-    background: grey;
-    margin-right: 20px;
-}
 
 .boxMA3 {
     display: flex;
@@ -195,6 +266,7 @@
     height: 300px;
     background: grey;
     margin-right: 20px;
+    padding: 0px !important;
 }
 
 .boxFooterInicio {
