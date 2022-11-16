@@ -123,7 +123,7 @@ function Cadastro() {
                             />
                         </Form.Group>
 
-                        <Button variant="secondary" onClick = {(cadastrar)}> Cadastrar </Button>
+                        <Button variant="secondary" onClick = {(createUser)}> Cadastrar </Button>
 
                         <Link to="login" className="cadastrado"> Já possui uma conta? Entre agora! </Link>
                         
