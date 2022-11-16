@@ -8,14 +8,15 @@ import api from "../../services/api";
 function Login() {
     
     const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [senha, setSenha] = useState();
     const history = useHistory();
 
     async function login(e) {
         e.preventDefault();
         try {
-            const response = await api.post('/users', {email, password});
-            alert("Bem-vindo à Butter", response.data.user.nome);
+            const response = await api.post('/login', {email, senha});
+            alert("Bem-vindo à Butter", response.data.user.name);
+            console.log(response);
             history.push("inicio");
 
         } catch (error) {
@@ -56,7 +57,7 @@ function Login() {
                             <Form.Control 
                             type="password" 
                             placeholder="Senha" 
-                            onChange = {(e) => setPassword(e.target.value)} />
+                            onChange = {(e) => setSenha(e.target.value)} />
                         </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
