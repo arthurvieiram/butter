@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { BsTelephone, BsInstagram } from "react-icons/bs";
-import "./Cadastro.css"
+import "./Cadastro.css";
+import api from "../../services/api";
 
 function Cadastro() {
 
@@ -17,10 +18,29 @@ function Cadastro() {
 
     const history = useHistory();
 
-    function cadastrar() {
-        console.log(locUsuario);
-        history.push("inicio");
+    async function createUser(e) {
+        e.preventDefault();
+        try {
+            const response = await api.post('/users', {nome, email, password, locUsuario});
+            alert("Bem-vindo à Butter", response.data.user.nome);
+            history.push("inicio");
+
+        } catch (error) {
+            if(error.response.status === 403) {
+                alert("Endereço de email e/ou senha inválido(s)!");
+            }
+
+            else {
+                alert(error.response.data.notification);
+            }
+            console.warn(error);
+        }
     }
+
+    // function cadastrar() {
+    //     console.log(locUsuario);
+    //     history.push("inicio");
+    // }
 
     function handleChange(e) {
         const {name, value} = e.target;
@@ -103,7 +123,7 @@ function Cadastro() {
                             />
                         </Form.Group>
 
-                        <Button variant="secondary" onClick = {(cadastrar)}> Cadastrar </Button>
+                        <Button variant="secondary" onClick = {(createUser)}> Cadastrar </Button>
 
                         <Link to="login" className="cadastrado"> Já possui uma conta? Entre agora! </Link>
                         

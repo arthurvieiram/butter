@@ -14,8 +14,8 @@ function Login() {
     async function login(e) {
         e.preventDefault();
         try {
-            const response = await api.post('/login', {email, password});
-            alert("Bem-vindo à Butter", response.data.user.name);
+            const response = await api.post('/users', {email, password});
+            alert("Bem-vindo à Butter", response.data.user.nome);
             history.push("inicio");
 
         } catch (error) {

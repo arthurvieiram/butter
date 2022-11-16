@@ -5,8 +5,22 @@ import { CgProfile } from "react-icons/cg";
 import { TbLogout } from "react-icons/tb";
 import { BiSearchAlt } from "react-icons/bi";
 import { BsTelephone, BsInstagram } from "react-icons/bs";
+import api from "../../services/api";
 
 function Perfil() {
+
+    async function getUsuario(e) {
+        e.preventDefault();
+        try {
+            const response = await api.get("/users/:user_id");
+
+            return response;
+
+        } catch (error) {
+            alert(error.response.data.notification);
+            console.warn(error);
+        }
+    }
     return (
         <div className = "basePerfil">
 
