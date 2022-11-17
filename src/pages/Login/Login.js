@@ -6,6 +6,8 @@ import "./Login.css";
 import api from "../../services/api";
 
 function Login() {
+
+    const [test, setTest] = useState();
     
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
@@ -15,8 +17,10 @@ function Login() {
         e.preventDefault();
         try {
             const response = await api.post('/login', {email, senha});
-            alert("Bem-vindo à Butter", response.data.user.name);
+            setTest(response.data);
+            alert("Bem-vindo à Butter", response.test?.nome);
             console.log(response);
+            console.log(test);
             history.push("inicio");
 
         } catch (error) {

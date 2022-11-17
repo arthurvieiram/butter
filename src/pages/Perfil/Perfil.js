@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { getUsuario_id } from "../../services/auth";
 import "./Perfil.css"
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
@@ -9,8 +10,25 @@ import api from "../../services/api";
 
 function Perfil() {
 
-    async function getUsuario(e) {
-        e.preventDefault();
+    const [dadosUsuario, setDadosUsuario] = useState();
+
+    async function getDadosUsuario() {
+        try {
+            const usuarioId = getUsuario_id();
+            const response = await api.get(`/users/${usuarioId}`);
+            setDadosUsuario(response);
+            console.log("Chegou", dadosUsuario);
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+
+    useEffect(() => {
+        getDadosUsuario();
+    },[]);
+
+
+    async function getUsuario() {
         try {
             const response = await api.get("/users/:user_id");
 
@@ -43,8 +61,8 @@ function Perfil() {
             <div className = "paginaPerfil">
                 <div className = "Usuario">
                 <img className = "icone" src = "/images/icone2.png" alt =" icone" />
-                    <h1 className = "nomeUsuario"> Nome </h1>
                     <div className = "dadosUsuario">
+                        <h1 className = "nomeUsuario"> Nome:{ dadosUsuario?.nome } </h1>
                         <h2 className = "idade"> Idade </h2>
                         <h2 className = "email"> Email </h2>
                         <h2 className = "endereco"> Endereço completo </h2>
