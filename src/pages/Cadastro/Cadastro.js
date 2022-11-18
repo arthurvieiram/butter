@@ -9,7 +9,7 @@ function Cadastro() {
 
     const[nome, setNome] = useState();
     const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [senha, setSenha] = useState();
     const [locUsuario, setLocUsuario] = useState({
         pais: "", 
         estado: "", 
@@ -18,44 +18,46 @@ function Cadastro() {
 
     const history = useHistory();
 
-    async function cadastrar(e) {
-        e.preventDefault();
-        if(senha === confsenha){
-            try {
-            console.log(nome, cpf, senha, email, telefone, endereco);
-            const response = await api.post("/usuarios", {nome, cpf, senha, email, telefone, endereco});
-            
-            alert("Cadastrado");
-            cadastro(response.data.accessToken);
-            history.push("/home");
-            } catch (error) {
-            console.log("deu erro");
-            console.warn(error);
-            alert(error.message);
-            }
-        }else{
-            alert("Senhas não são iguais.");
-        }
-    }
-
-    // async function createUser(e) {
+    // async function cadastrar(e) {
     //     e.preventDefault();
-    //     try {
-    //         const response = await api.post('/users', {nome, email, password, locUsuario});
-    //         alert("Bem-vindo à Butter", response.data.user.nome);
-    //         history.push("inicio");
-
-    //     } catch (error) {
-    //         if(error.response.status === 403) {
-    //             alert("Endereço de email e/ou senha inválido(s)!");
-    //         }
-
-    //         else {
-    //             alert(error.response.data.notification);
-    //         }
+    //     if(senha === confsenha){
+    //         try {
+    //         console.log(nome, cpf, senha, email, telefone, endereco);
+    //         const response = await api.post("/usuarios", {nome, cpf, senha, email, telefone, endereco});
+            
+    //         alert("Cadastrado");
+    //         cadastro(response.data.accessToken);
+    //         history.push("/home");
+    //         } catch (error) {
+    //         console.log("deu erro");
     //         console.warn(error);
+    //         alert(error.message);
+    //         }
+    //     }else{
+    //         alert("Senhas não são iguais.");
     //     }
     // }
+
+    async function createUser(e) {
+        e.preventDefault();
+        try {
+            const endereco = `${locUsuario.pais},${locUsuario.estado},${locUsuario.endcompleto}`;
+            const response = await api.post('/users', {nome, email, senha, endereco});
+            console.log(response.data);
+            alert(`Bem-vindo à Butter, ${response.data.nome}`);
+            history.push("login");
+
+        } catch (error) {
+            if(error?.response?.status === 403) {
+                alert("Endereço de email e/ou senha inválido(s)!");
+            }
+
+            else {
+                alert(error?.response?.data?.notification);
+            }
+            console.warn(error);
+        }
+    }
 
     // function cadastrar() {
     //     console.log(locUsuario);
@@ -114,7 +116,7 @@ function Cadastro() {
                             <Form.Control 
                             type="password" 
                             placeholder="Senha" 
-                            onChange = {(e) => setPassword(e.target.value)}/>
+                            onChange = {(e) => setSenha(e.target.value)}/>
                         </Form.Group>
 
                         <h6 className = "endereço"> Endereço </h6>

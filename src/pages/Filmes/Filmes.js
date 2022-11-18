@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import "./Filmes.css";
 import Modal from './Modal';
@@ -8,10 +8,29 @@ import { TbLogout } from "react-icons/tb";
 import { BiSearchAlt } from "react-icons/bi";
 import { BsTelephone, BsInstagram } from "react-icons/bs";
 import {Button} from "react-bootstrap";
+import api from '../../services/api';
 
 function Filmes() {
 
     const [openModal, setOpenModal] = useState(false);
+    const [filmes, setFilmes] = useState([]);
+    const [filmeAtual, setFilmeAtual] = useState({});
+
+    async function getFilme(){
+        try {
+            const response = await api.get("/filmes");
+            setFilmes(response.data);
+            console.log(response.data);
+        } catch (error) {
+            console.warn(error);
+        }
+    }
+
+    useEffect(() => {
+        getFilme();
+    },[]);
+
+    console.log(filmes);
 
     return (
         <div className = "baseFilmes">
@@ -33,23 +52,23 @@ function Filmes() {
             </div>
 
             <div className = "paginaFilmes">
-                <div className = "filmesAcao">
-                    <h1 className = "tituloAcao"> Ação </h1>
                     <div className = "boxFilmesWrapper">
-                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Button><Modal open={openModal} onClose={() => setOpenModal(false)} />
-                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "topgun" src = "/images/topgun.png" alt =" topgun" /></Button><Modal open={openModal} onClose={() => setOpenModal(false)} />
-                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" /></Button><Modal open={openModal} onClose={() => setOpenModal(false)} />
-                    </div>
-                </div>
-
-                <div className = "filmesComedia">
-                    <h1 className = "tituloComedia"> Comédia </h1>
-                    <div className = "boxFilmesCWrapper">
-                        <Button variant = 'link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "minhamae" src = "/images/minhamae.png" alt =" minhmae" /></Button>
-                        <Button variant = 'link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "auto" src = "/images/auto.png" alt =" auto" /></Button>
-                        <Button variant = 'link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "ace" src = "/images/ace.png" alt =" ace" /></Button>
+                        {filmes.map((filme)=>(
+                            <Button variant="link" onClick={() => {
+                                setFilmeAtual(filme)
+                                setOpenModal(true)
+                            }}  className = "boxFilmeC1">
+                                <img className = "interistelar1" src = {filme.imagem} alt = {filme.nome} />
+                            </Button>
+                        ))}
+                        {/* <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Button>
+                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "topgun" src = "/images/topgun.png" alt =" topgun" /></Button>
+                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" /></Button>
+                        <Button variant ='link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "minhamae" src = "/images/minhamae.png" alt =" minhmae" /></Button>
+                        <Button variant ='link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "auto" src = "/images/auto.png" alt =" auto" /></Button>
+                        <Button variant ='link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "ace" src = "/images/ace.png" alt =" ace" /></Button> */}
+                        <Modal filme={filmeAtual} open={openModal} onClose={() => setOpenModal(false)} />
                     </div>  
-                </div>
             </div>
 
             <div className="boxFooterFilmes">

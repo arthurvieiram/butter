@@ -1,7 +1,6 @@
 import React from 'react';
-import interistelar from './interistelar.png';
 
-const Modal = ({ open, onClose }) => {
+const Modal = ({ open, onClose, filme }) => {
   if (!open) return null;
   return (
     <div onClick={onClose} className='overlay'>
@@ -11,13 +10,13 @@ const Modal = ({ open, onClose }) => {
         }}
         className='modalContainer'
       >
-        <img src={interistelar} alt='/' />
+        <img src={filme?.imagem} alt='/' />
         <div className='modalRight'>
           <p className='closeBtn' onClick={onClose}>
             X
           </p>
           <div className='content'>
-            <p>Ace Ventura: Pet Detective <br/>Ano: 1994  <br/>Diretor: Tom Shadyac<br/></p>
+            <p> {filme?.nome} <br/> {filme?.data} <br/>Diretor: {filme?.diretor}<br/></p>
           </div>
           <div className='btnContainer'>
             <button className='btnPrimary'>

@@ -2,25 +2,23 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { BsTelephone, BsInstagram } from "react-icons/bs";
+import { login } from "../../services/auth";
 import "./Login.css";
 import api from "../../services/api";
 
 function Login() {
 
-    const [test, setTest] = useState();
     
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
     const history = useHistory();
 
-    async function login(e) {
+    async function handleLogin(e) {
         e.preventDefault();
         try {
             const response = await api.post('/login', {email, senha});
-            setTest(response.data);
-            alert("Bem-vindo à Butter", response.test?.nome);
-            console.log(response);
-            console.log(test);
+            login(response.data);
+            alert(`Bem-vindo à Butter ${response.data.user[0].nome}`);
             history.push("inicio");
 
         } catch (error) {
@@ -71,7 +69,7 @@ function Login() {
                             </div>
                             </Form.Group>
 
-                        <Button variant="secondary" onClick = {(login)}> Entrar </Button>
+                        <Button variant="secondary" onClick = {(handleLogin)}> Entrar </Button>
                         
                     </Form>
 

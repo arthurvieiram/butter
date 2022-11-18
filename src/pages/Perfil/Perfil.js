@@ -16,8 +16,7 @@ function Perfil() {
         try {
             const usuarioId = getUsuario_id();
             const response = await api.get(`/users/${usuarioId}`);
-            setDadosUsuario(response);
-            console.log("Chegou", dadosUsuario);
+            setDadosUsuario(response.data[0]); 
         } catch (error) {
             alert(error.message);
         }
@@ -27,18 +26,6 @@ function Perfil() {
         getDadosUsuario();
     },[]);
 
-
-    async function getUsuario() {
-        try {
-            const response = await api.get("/users/:user_id");
-
-            return response;
-
-        } catch (error) {
-            alert(error.response.data.notification);
-            console.warn(error);
-        }
-    }
     return (
         <div className = "basePerfil">
 
@@ -61,11 +48,11 @@ function Perfil() {
             <div className = "paginaPerfil">
                 <div className = "Usuario">
                 <img className = "icone" src = "/images/icone2.png" alt =" icone" />
+                <h1 className = "nomeUsuario"> { dadosUsuario?.nome } </h1>
                     <div className = "dadosUsuario">
-                        <h1 className = "nomeUsuario"> Nome:{ dadosUsuario?.nome } </h1>
-                        <h2 className = "idade"> Idade </h2>
-                        <h2 className = "email"> Email </h2>
-                        <h2 className = "endereco"> Endereço completo </h2>
+                        <h2 className = "idade"> { dadosUsuario?.idade } </h2>
+                        <h2 className = "email"> { dadosUsuario?.email } </h2>
+                        <h2 className = "endereco"> { dadosUsuario?.endereco } </h2>
                     </div>
                 </div>
 
