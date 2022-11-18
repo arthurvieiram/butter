@@ -43,7 +43,6 @@ function Cadastro() {
         try {
             const endereco = `${locUsuario.pais},${locUsuario.estado},${locUsuario.endcompleto}`;
             const response = await api.post('/users', {nome, email, senha, endereco});
-            console.log(response.data);
             alert(`Bem-vindo à Butter, ${response.data.nome}`);
             history.push("login");
 

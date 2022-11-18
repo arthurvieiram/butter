@@ -8,6 +8,7 @@ import { TbLogout } from "react-icons/tb";
 import { BiSearchAlt } from "react-icons/bi";
 import { BsTelephone, BsInstagram } from "react-icons/bs";
 import {Button} from "react-bootstrap";
+import { getUsuario_id } from "../../services/auth";
 import api from '../../services/api';
 
 function Filmes() {
@@ -15,6 +16,24 @@ function Filmes() {
     const [openModal, setOpenModal] = useState(false);
     const [filmes, setFilmes] = useState([]);
     const [filmeAtual, setFilmeAtual] = useState({});
+
+    async function favoritar(){
+        try {
+            const usuarioId = getUsuario_id();
+            const response = await api.post(`/filmesfav/:filme_id/${usuarioId}`);
+            alert(`Bem-vindo à Butter, ${response.data.nome}`);
+
+        } catch (error) {
+            if(error?.response?.status === 403) {
+                alert("Endereço de email e/ou senha inválido(s)!");
+            }
+
+            else {
+                alert(error?.response?.data?.notification);
+            }
+            console.warn(error);
+        }
+    }
 
     async function getFilme(){
         try {

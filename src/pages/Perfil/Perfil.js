@@ -11,6 +11,17 @@ import api from "../../services/api";
 function Perfil() {
 
     const [dadosUsuario, setDadosUsuario] = useState();
+    const [favUsuario, setFavUsuario] = useState();
+
+    async function getFilmesFav() {
+        try {
+            const usuarioId = getUsuario_id();
+            const response = await api.get(`/filmesfav/${usuarioId}`);
+            setFavUsuario(response.data[0]); 
+        } catch (error) {
+            alert(error.message);
+        }
+    }
 
     async function getDadosUsuario() {
         try {
