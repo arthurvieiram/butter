@@ -11,17 +11,18 @@ import api from "../../services/api";
 function Perfil() {
 
     const [dadosUsuario, setDadosUsuario] = useState();
-    const [favUsuario, setFavUsuario] = useState();
+    // const [favUsuario, setFavUsuario] = useState();
 
-    async function getFilmesFav() {
-        try {
-            const usuarioId = getUsuario_id();
-            const response = await api.get(`/filmesfav/${usuarioId}`);
-            setFavUsuario(response.data[0]); 
-        } catch (error) {
-            alert(error.message);
-        }
-    }
+    // async function getFilmesFav() {
+    //     try {
+    //         const usuarioId = getUsuario_id();
+    //         const response = await api.get(`/filmesfav/${usuarioId}`);
+    //         console.log(response);
+    //         setFavUsuario(response.data[0]); 
+    //     } catch (error) {
+    //         alert(error.message);
+    //     }
+    // }
 
     async function getDadosUsuario() {
         try {
@@ -37,10 +38,14 @@ function Perfil() {
         getDadosUsuario();
     },[]);
 
+    // useEffect(() => {
+    //     getFilmesFav();
+    // },[]);
+
     return (
         <div className = "basePerfil">
 
-            <div className="boxHeaderInicio">
+            <div className="boxHeaderPerfil">
             <img className = "logoButter" src = "/images/logo_butter.png" alt =" logo_butter" />
                 
                 <div className = "botoesInicioFilmes">
@@ -58,10 +63,11 @@ function Perfil() {
 
             <div className = "paginaPerfil">
                 <div className = "Usuario">
-                <img className = "icone" src = "/images/icone2.png" alt =" icone" />
-                <h1 className = "nomeUsuario"> { dadosUsuario?.nome } </h1>
+                    <div className = "imgUsuario">
+                        <img className = "icone" src = "/images/icone2.png" alt =" icone" />
+                    </div>
+                    <h1 className = "nomeUsuario"> { dadosUsuario?.nome } </h1>
                     <div className = "dadosUsuario">
-                        <h2 className = "idade"> { dadosUsuario?.idade } </h2>
                         <h2 className = "email"> { dadosUsuario?.email } </h2>
                         <h2 className = "endereco"> { dadosUsuario?.endereco } </h2>
                     </div>
@@ -69,12 +75,9 @@ function Perfil() {
 
                 <div className = "filmesFavoritados">
                     <h1 className = "tituloFilmesFav"> Filmes Favoritados </h1>
-                    <h4 className = "verTodos"> Ver todos </h4>
                     <div className="boxFavoritosWrapper">
-                    <img className = "ace" src = "/images/ace.png" alt =" ace" />
-                    <img className = "auto" src = "/images/auto.png" alt =" auto" />
-                    <img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" />
-                        </div>
+                        <div className = "FilmesFavoritados"> jndvjsnd </div>
+                    </div>
                 </div>
             </div>
 

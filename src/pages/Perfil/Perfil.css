@@ -99,6 +99,12 @@
     margin-left: 5%;
 }
 
+.imgUsuario {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
 .boxUsuario {
     display: flex;
     flex-direction: column;
@@ -111,7 +117,7 @@
     display: flex;
     color: white;
     margin-top: 2%;
-    margin-left: 23%;
+    margin-left: -7%;
 }
 
 .dadosUsuario {

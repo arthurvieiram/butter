@@ -39,7 +39,6 @@ function Filmes() {
         try {
             const response = await api.get("/filmes");
             setFilmes(response.data);
-            console.log(response.data);
         } catch (error) {
             console.warn(error);
         }
@@ -80,12 +79,6 @@ function Filmes() {
                                 <img className = "interistelar1" src = {filme.imagem} alt = {filme.nome} />
                             </Button>
                         ))}
-                        {/* <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "interistelar1" src = "/images/interistelar.png" alt =" interistelar1" /></Button>
-                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "topgun" src = "/images/topgun.png" alt =" topgun" /></Button>
-                        <Button variant="link" onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "deltaforce" src = "/images/deltaforce.png" alt =" deltaforce" /></Button>
-                        <Button variant ='link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "minhamae" src = "/images/minhamae.png" alt =" minhmae" /></Button>
-                        <Button variant ='link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "auto" src = "/images/auto.png" alt =" auto" /></Button>
-                        <Button variant ='link' onClick={() => setOpenModal(true)}  className = "boxFilmeC1"><img className = "ace" src = "/images/ace.png" alt =" ace" /></Button> */}
                         <Modal filme={filmeAtual} open={openModal} onClose={() => setOpenModal(false)} />
                     </div>  
             </div>
